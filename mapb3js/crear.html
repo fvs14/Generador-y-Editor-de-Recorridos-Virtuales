@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <title>MAPB Crear</title>
+    <link rel="icon" type="image" href="/assets/logo.PNG" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="/public/crearCSS.css" />
+  </head>
+
+  <body>
+    <div class="row p-0 m-0">
+      <div id="navegador" class="col-sm-2 p-0 m-0"> 
+        <img id="icono" src="/assets/logo.PNG" alt="icono imagen" />  
+        <!-- <label id="btn_cargar" for="image_input" class="btn">Cargar imágenes</label> -->
+        <button id="btn_hotspot"  class="btn"> Agregar Hotspot</button>
+        <button id="btn_infospot" class="btn">Agregar Infospot</button>
+        <button id="btn_eliminar"  class="btn">Eliminar Elemento</button>
+        
+        <div id="image_preview_div">
+          <label id="name_img"></label>
+          
+          
+          <!-- <label id="btn_add_img" for="image_input2" > + </label>
+          <form id="form_img2" action="/multiple" method="POST" enctype="multipart/form-data">
+            <input id="image_input2" type="file" name="images" multiple 
+            accept="image/png, image/jpeg" style="visibility: hidden"/>
+          </form> -->
+          
+
+
+          <img src="" alt="panorama" class="image-preview" />
+          <div class="cont_iconos_usados">
+
+            <label id="number_img"></label>
+            <img src="" alt="hotspot" class= "icono_usado" id="icono_usado_hot" />
+            <img src="" alt="infospot" class= "icono_usado" id="icono_usado_info" />
+          </div>
+          <form id="form_imagenes" action="/multiple" method="POST" enctype="multipart/form-data">
+            <input id="image_input" type="file" name="images" multiple 
+            accept="image/png, image/jpeg" style="visibility: hidden"/>
+            <input name='name' id='name' value="dir_rec" style="visibility: hidden" />
+          </form>
+        </div>
+
+        <a id="btn_salir"class="btn" href="/buscar"> Salir </a>
+       
+      </div>
+     
+      <div id="Contenido" class="col-sm-10 pl-3 ">
+        <div id="progress" class="p-0 m-0">
+          <div id="bar"></div>
+        </div>
+        <section class="main-section">
+         
+          <p class= "m-0 p-1" id="p_consejo">Seleccione una configuración de iconos</p>
+          <div id="tour_panolens" class="Cajonfoto360">
+            <label id="btn_agregar_img" for="image_input" >Cargar imágenes</label>
+          </div>
+          
+          <button id="btn_last" class="change_pano_last"> </button> 
+          <button id="btn_next" class="change_pano_next"> </button>
+          <button  id="btn_guardar" value="Submit form">Guardar</button>
+          <div class="circle">
+            <button id="btn_camera" class="btn_camara"> Fijar Cámara </button>
+          </div>
+          
+          <div id="select_pano">
+            <p class="m-0 p-0">Seleccione la imagen a conectar</p>
+            <p class="m-0 p-0" id="name_img_hotspot"></p >
+            <p class="mt-0 mb-0 p-0" id="number_img_hotspot"></p >
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <!-- hijos dinamicos del dropdown -->
+                </div>
+              </div>
+            <img id="img_select_spot" class="cont_img_select" alt="image preview"></img>
+            <button id="btn_last_pano" class="change_pano_last"></button> 
+            <button id="btn_next_pano" class="change_pano_next"></button>
+            <button id="btn_seleccionar" class="btn_img_spot">Seleccionar</button> 
+            <button id="btn_cancelar" class="btn_img_spot">Cancelar</button> 
+          </div>
+          
+          <div id="conf_spot">
+            <h4 class="pt-3">Configuración de iconos</h4>
+            <div class="row p-1 m-1">
+              <div class="col-sm-6 p-0 m-0" >
+                <h4>Hotspot</h4>
+                <img src="/assets/arrow-up.png" alt="icono hotspot" class="icono_conf" id="icon_hot"/>
+                <button id="btn_camb_hotspot" class="btn_conf">Cambiar </button>
+              </div>
+              <div class="col-sm-6 p-0 m-0" >
+                <h4>Infospot</h4>
+                <img src="/assets/information.png" alt="icono infospot" class="icono_conf" id="icon_info"/> 
+                <button id="btn_camb_infospot" class="btn_conf">Cambiar </button>
+              </div>
+              <button id="btn_usar_conf" class="btn">Usar esta configuración</button>
+            </div>
+          </div>
+
+          <div id="conf_hotspot">
+            <h4 class="pt-3">Seleccione el icono deseado</h4>
+            <div class="cont_iconos">
+              <div class="icono_caja"><img src="/assets/arrow-up.png" alt="icono hotspot" class="icono_spot" id="Hicon1"/></div>
+              <div class="icono_caja"><img src="/assets/spot mini.png" alt="icono hotspot" class="icono_spot" id="Hicon2"/></div>
+              <div class="icono_caja"><img src="/assets/negro.png" alt="icono hotspot" class="icono_spot" id="Hicon3"/></div>
+              <div class="icono_caja"><img src="/assets/logo.PNG" alt="icono hotspot" class="icono_spot" id="Hicon4" /></div>
+              <button id="btn_usar_conf_hot" class="btn mt-1">Guardar configuración</button>
+            </div>
+            
+          </div>
+
+          <div id="conf_infospot">
+            <h4 class="pt-3">Seleccione el icono deseado</h4>
+            <div class="cont_iconos">
+              <div class="icono_caja"> <img src="/assets/information.png" alt="icono infospot" class="icono_spot" id="Iicon1"/></div>
+              <div class="icono_caja"> <img src="/assets/gris.png" alt="icono infospot" class="icono_spot" id="Iicon2"/></div>
+              <div class="icono_caja"> <img src="/assets/inf-negro.png" alt="icono infospot" class="icono_spot" id="Iicon3"/></div>
+              <div class="icono_caja"><img src="/assets/logo.PNG" alt="icono infospot" class="icono_spot"id="Iicon4"/> </div>
+             
+              <button id="btn_usar_conf_info" class="btn mt-1">Guardar configuración</button>
+            </div>
+          </div>
+
+          <div id="select_first_pano">
+            <p>Seleccione la primera imagen que tendra el recorrido</p>
+            <img id="img_select" class="cont_img_select" alt="image preview"></img>
+            <button id="btn_last_image" class="change_pano_last"></button> 
+            <button id="btn_next_image" class="change_pano_next"></button>
+            <button class="btn_img_spot" id="btn_select_image">Seleccionar</button> 
+          </div>
+
+          <div id="estado_de_guardado">
+            <p id="text_estado_guardado">Generando recorrido....</p>
+          </div>
+
+          <div class="mensaje_exito" id="guardado_exitoso">
+            <h4 class="mt-4">¡¡Recorrido generado exitosamente!!</h4>
+            <div class="row p-4 m-2">
+              <div class="col-sm-6 p-0 m-0" >
+                <button id="btn_link" class="btn">Ver link </button>
+              </div>
+              <div class="col-sm-6 p-0 m-0" >
+                <button id="btn_iframe" class="btn">Ver iframe </button>
+              </div>
+              <a class="btn mt-4" href="/buscar"> Salir </a>
+            </div>
+          </div>
+
+          <div class="mensaje_exito" id="link_recorrido">
+            <h4 class="mt-4" >Link del recorrido</h4>
+            <textarea name="" id="text_area_link" class="text_area_mensaje" >Generando link...</textarea>  
+            
+            <button id="btn_cerrar_link"  class="btn mt-1">Cerrar</button>
+              
+          </div>
+
+          <div class="mensaje_exito" id ="iframe_recorrido">
+            <h4 class="mt-4">Iframe del recorrido</h4>
+            <textarea name="" id="text_area_iframe" class="text_area_mensaje">"<iframe width="900px" height="500px" src="http://137.184.87.92/public/visualizador/.html"></iframe>"</textarea>  
+            
+            <button id="btn_cerrar_iframe" class="btn mt-1">Cerrar</button>
+              
+          </div>
+
+          <!-- <label id="ejes"></label> -->
+          
+        </section>
+      </div>
+       
+    </div>
+     
+    <script src="/public/three.min.js"></script>
+    <script src="/public/panolens.min.js"></script>
+
+    <script src="/public/crear_recorrido.js"></script>
+  </body>
+</html>

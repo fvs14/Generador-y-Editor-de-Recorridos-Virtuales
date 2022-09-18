@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <title>MAPB Consultor de recorridos</title>
+    <link rel="icon" type="image" href="assets/logo.PNG" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    /> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="/public/buscarCSS.css" />
+  </head>
+
+  <body>
+    <div class="row p-0 m-0">
+      <div id="navegador" class="col-sm-2 p-0 m-0">
+        <img id="icono" src="/assets/logo.PNG" alt="icono imagen" />  
+        <a  class="btn" href="/crear">Crear Recorrido</a>
+        <a  class="btn" href="/loguin">Salir</a>
+        <!-- <a  class="btn" href="visualizador.html">Visualizador</a> -->
+      </div>
+
+      <div id="Contenido" class="col-sm-10 p-3 m-0">
+        <div class="Cajon">
+          <div id="buscar_cajon">
+            
+            <form id="buscar_form">
+              <h4 class="buscar_titulo">Nombre del cliente: </h4>
+              <input type="text" name="cliente" id="input_buscar" />
+              <button type="button" class="buscar_btn" id="btn_bus">Buscar</button>
+              <h5 class="m-3" id="estado_bus"> </h5>
+            </form>
+            
+          </div>
+         
+          <div id="espacio_cajon">
+            <!-- <div class="elemento">
+              <h4 class="elemento_titulo" class="nombre_rec"> Recorrido /</h4>
+              <h4 class="elemento_titulo"> Cliente /</h4>
+              <a  class="elemento_btn" href="editar.html">Editar</a>
+              <h4 class="elemento_titulo">http://localhost:3000/visualizador.html</h4>
+            </div> -->
+          </div>
+          
+        </div>
+        
+        
+      </div>
+    </div>
+   <script src="/public/buscar_recorrido.js"></script>
+  </body>
+</html>

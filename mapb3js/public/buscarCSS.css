@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #272626;
+  /* background: linear-gradient(141deg, #141414 0%, #2f2f2f 51%, #2f2f2f 75%); */
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(250, 251, 250);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(250, 252, 250);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(37, 191, 88);
+}
+
+/* selected link */
+a:active {
+  color: rgb(19, 145, 54);
+} 
+
+html {
+  scroll-behavior: smooth;
+}
+h4 {
+  color: rgb(212, 212, 212);
+}
+h5 {
+  color: rgb(246, 246, 246);
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn {
+  
+  background-color: rgb(105, 133, 22);
+  font-size: 18px;
+  color: rgb(250, 249, 250);
+  text-transform: uppercase;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 3px 3px 3px rgba(11, 61, 20, 0.8);
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(116, 116, 116, 0.26);
+  border-color: rgb(219, 216, 216);
+  border-style: ridge;
+  border-radius: 2%;
+  
+  width: 90%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  
+  position: relative;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%);
+
+  
+}
+.btn:hover {
+  background-color: rgb(251, 251, 251);
+  color: rgb(12, 0, 0);
+  -webkit-transition: background-color 1.5s;
+  -moz-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+
+#navegador {
+  background-color: #272626;
+
+  height: 100%;
+}
+
+
+#icono {
+  width: 100%;
+  min-width: 50px;
+  min-height: 100px;
+  max-height: 300px;
+  position: relative;
+}
+#Contenido {
+  background-color: #272626;
+}
+
+.Cajon {
+  width: 100%;
+  min-height: 500px;
+  height: 700px;
+  border-style: ridge;
+  border-color: rgb(61, 61, 61);
+  margin-top: 3%;
+  max-height: 700px;
+  background-color: #bbbbbb;
+  
+}
+#espacio_cajon{
+  background-color: #fefefe;
+  padding: 10px;
+  overflow: scroll;
+  height: 80%;
+  margin: 1%;
+}
+
+.elemento{
+  width: 100%;
+  background: linear-gradient(180deg, rgb(30, 32, 24), rgb(61, 61, 61));
+  color: #fefefe;
+  padding: 15px;
+  overflow: auto;
+  margin-top: 10px;
+}
+.elemento_titulo{
+  display: inline-block;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 3px 3px 3px rgba(38, 47, 40, 0.8);
+  margin-right: 20px;
+  color: #fefefe;
+}
+.elemento_btn{
+  background-color: rgb(105, 133, 22);
+  color: #fefefe;
+  width: 5%;
+  padding: 5px;
+  margin: 5px 25px 5px 25px ;
+  min-width: 80px;
+}
+.elemento_btn:hover{
+  background-color:  rgb(252, 252, 252);
+  color: #141414;
+  -webkit-transition: background-color 1.5s;
+  -moz-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+.elemento_btn_eliminar{
+  background-color: rgb(198, 42, 18);
+  color: #fefefe;
+  width: 5%;
+  padding: 5px;
+  margin: 5px 25px 5px 25px ;
+  min-width: 80px;
+}
+
+.elemento_btn_eliminar:hover{
+  background-color:  rgb(111, 7, 7);
+  cursor: pointer;
+  -webkit-transition: background-color 1.5s;
+  -moz-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+
+#buscar_cajon{
+  padding: 10px;
+}
+.buscar_titulo{
+  display: inline-block;
+  color: black;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 3px 3px 3px rgba(221, 221, 221, 0.8);
+  margin: 5px 5px 5px 25px ;
+}
+#input_buscar{
+  width: 35%;
+  height: 40px;
+  margin: 5px 25px 5px 25px ;
+}
+#estado_bus{
+  display: inline-block;
+  color: #000000;
+}
+
+.buscar_btn{
+  background-color: rgb(105, 133, 22);
+  width: 10%;
+  color: #fefefe;
+  padding: 5px;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 3px 3px 3px rgba(11, 61, 20, 0.8);
+  min-width: 80px;
+}
+.buscar_btn:hover{
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  -webkit-transition: background-color 1.5s;
+  -moz-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+
+.id_rec{
+  display: none;
+}
+
+p {
+  color: rgb(3, 3, 3);
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+}
+
+/* medio monitor */
+@media (max-width: 1000px) {  /*cuando la pantalla tenga este tamño usar estas reglas*/
+  #espacio_cajon {
+    height: 80%;
+  }
+  .btn{
+    font-size: 13px;
+  }
+
+  .buscar_btn{
+    font-size: 13px;
+  }
+}
+
+
+/* telefono y laptop*/
+@media (max-height: 900px) {  /*cuando la pantalla tenga este tamño usar estas reglas*/
+  #espacio_cajon {
+    height: 70%;
+  }
+
+  .Cajon {
+    min-height: 500px;
+    height: 500px;
+  }
+
+  h5{
+    font-size: 15px;
+  }
+
+  h4{
+    font-size: 18px;
+  }
+
+  .btn{
+    font-size: 12px;
+    max-height: 40px;
+  }
+
+  .buscar_btn{
+    font-size: 12px;
+  }
+
+  #icono {
+    width: 100%;
+    max-width: 400px;
+    max-height: 220px;
+    margin-top: 2px;
+  }
+}
+/* telefono horizontal */
+@media (min-width: 650px ) and (max-height:450px )and (orientation: landscape) { 
+  .btn{
+    font-size: 10px;
+  }
+
+  h4{font-size: 15px;}
+
+  .buscar_btn{
+    font-size: 10px;
+  }
+  #espacio_cajon {
+    height: 55%;
+  }
+  .Cajon {
+    min-height: 100px;
+    height: 300px;
+  }
+  a{
+    font-size: 12px;
+  }
+  #icono {
+    width: 100%;
+    max-width: 400px;
+   
+    min-height: 83px;
+    max-height: 83px;
+    margin-top: 1px;
+  }
+}
+
+/* tablet y laptop pequeña */
+@media (min-width: 720px ) and (max-height:780px ){ 
+  .btn{
+    font-size: 10px;
+  }
+}

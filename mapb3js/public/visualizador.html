@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="recorrido virtual"/>
+    <title>Visualizador</title>
+    <link rel="icon" type="image" href="/assets/logo.PNG" />
+    <link rel="stylesheet" type="text/css" href="/public/visualizador_CSS.css" />
+</head>
+<body>
+    <div id="contenedor">
+        <div id="progress" class="p-0 m-0">
+            <div id="bar"></div>
+          </div>
+        <div id="caja_loader">
+            <div class="loader" id="loader">Loading...</div>
+        </div>
+        
+    </div>
+    
+    <!-- heigth with 100vh usa el 100% del body -->
+    <script src="/public/three.min.js"></script>
+    <script src="/public/panolens.min.js"></script>
+    <script src="/public/visualizar_recorrido.js"></script>
+</body>
+</html>

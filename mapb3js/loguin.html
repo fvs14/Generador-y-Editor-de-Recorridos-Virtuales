@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="" />
+        <title>MAPB Main</title>
+        <link rel="icon" type="image" href="/assets/logo.PNG" />
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="/public/loguinCSS.css" />
+    </head>
+    <body>
+        <div id="cont_body"></div>
+       
+
+        <div class="context">     
+        </div>
+        
+        <div id="cont1">   
+
+            <img class ="pro1img" src="/assets/pro1.PNG" alt="casa">        
+        </div>
+        <h5>Real investments for Real People</h5>
+
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+
+    <button id="btn_abrir_loguin" >Ingresar</button>
+       
+
+        <div id="id01" class="modal">
+        
+            <form class="modal-content animate" action="/loguin" method="post">
+                <div class="imgcontainer">
+                    <span id="icono_cerrar" class="close" title="Close Modal">&times;</span>
+                </div>
+            
+                <div class="imgcontainer">
+                    <img src="/assets/loguin_logo.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="us"><b>Usuario</b></label>
+                    <input id="usuario" type="text" placeholder="Ingrese su usuario" name="username" required>
+            
+                    <label for="pass"><b>Contraseña</b></label>
+                    <input id="password" type="password" placeholder="Ingrese su contraseña" name="password" required>
+                    
+                    <button id="btn_loguin" type="submit">Entrar</button>
+                    <!-- <a href="buscar.html">Entrar</a> -->
+                    <label>
+                    
+                    </label>
+                </div>
+        
+            </form>
+        </div>
+        <script src="/public/loguin_usuario.js"></script>
+    </body>
+</html>
