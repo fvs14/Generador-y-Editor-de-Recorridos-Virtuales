@@ -13,7 +13,7 @@ Para desplegar la herramienta localmente se debe:
 
 4-crear una base de datos llamada: MAPB en mongodb con atlas
 
-5-copiar el connection string de la base generada por mongodb, en un archivo llamado "password.txt" y agregarlo a la carpeta del proyecto mapb3js **mongodb debe aceptar la coneccion de la ip donde se corra la herramienta en caso de seleccionar esta opción de seguridad en mongodb
+5-copiar el connection string de la base generada por mongodb, en un archivo llamado "password.txt" y agregarlo a la carpeta del proyecto mapb3js **mongodb debe aceptar la conexion de la ip donde se corra la herramienta en caso de seleccionar esta opción de seguridad en mongodb
 
 6-crear las colecciones llamadas "usuarios" y "tours" en la base
 
