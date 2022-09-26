@@ -1,7 +1,7 @@
 # Generador-y-Editor-de-Recorridos-Virtuales
 Herramienta para generar y editar recorridos virtuales con javascript, nodejs, 3Js , Panolens y MongoDB para la empresa MAPB. 
 
-Este es un proyecto para la empresa MAPB para la creación edición y despliegue de recorridos virtuales actualmente hospedado en el servidor con la dirección http://137.184.87.92
+Este es un proyecto para la empresa MAPB para la creación edición y despliegue de recorridos virtuales actualmente hospedado en un servidor 
 
 Para desplegar la herramienta localmente se debe:
 
