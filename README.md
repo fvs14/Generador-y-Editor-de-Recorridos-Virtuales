@@ -1,13 +1,15 @@
 # Generador-y-Editor-de-Recorridos-Virtuales
-Herramienta para generar y editar recorridos virtuales con javascript, nodejs, 3Js , Panolens y MongoDB para la empresa MAPB. 
+Proyecto programable de Tesina:
 
-Este es un proyecto para la empresa MAPB para la creación edición y despliegue de recorridos virtuales actualmente hospedado en un servidor 
+Aplicación web para generar y editar recorridos virtuales usando javascript, nodejs, 3Js , Panolens y MongoDB para la empresa MAPB. 
+
+Este es un proyecto para la empresa MAPB para la creación edición y despliegue de recorridos virtuales en el cual se incluye el front end y backend de la aplicación
 
 Para desplegar la herramienta localmente se debe:
 
 1-instalar nodejs
 
-2-usar o instalar el gestor npm (npm install g- npm)
+2 instalar el gestor npm (npm install g- npm)
 
 3-usar los comandos en la linea de comando: npm install package.json
 
@@ -23,7 +25,7 @@ nombre: admin
 password : (password encriptado con metodo hash usando la página https://bcrypt-generator.com/) 
 **la colección tours ira vacia ya que la herramienta se encarga de crear los recorridos con su debido formato json
 
-8- abrir unicamente el folder map3js en Visual Studio Code y correr mediante la linea de comando: node index.js
+8- abrir el folder map3js en Visual Studio Code y correr mediante la linea de comando: node index.js
 
 9- abrir en el navegador el puerto 3000 usando: http://localhost:3000/ **usar un navegador compatible con webgl
 
