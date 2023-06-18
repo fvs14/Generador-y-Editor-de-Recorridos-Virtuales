@@ -22,8 +22,11 @@ Para desplegar la herramienta localmente se debe:
 6-crear las colecciones "usuarios" y "tours" en la base
 
 7- crear un usuario desde mongodb en la colección de usuarios ejemplo: 
+
 usuario: admin 
+
 nombre: admin 
+
 password : (generar un password encriptado con metodo hash usando la página https://bcrypt-generator.com/ con el round en 10 ) 
 
 **la colección tours ira vacia ya que la herramienta se encarga de crear los recorridos con su debido formato json
